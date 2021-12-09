@@ -1,0 +1,451 @@
+<!DOCTYPE html><!--22161126 허 민-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<head>
+
+<style media="screen">
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear:both;
+}
+header {
+  width: 1140px;
+  height: 100px;
+  margin: 0 auto;
+  /* border: solid 1px red; */
+}
+
+img{
+  border-radius: 10px;
+}
+
+#main_img {
+  width: 100%;
+  height: 250px;
+  /* border: solid 1px red; */
+  background-image: url("img/황금비율ㅈ.png");
+  background-repeat: repeat;
+  background-position: top center;
+  margin-top: 20px;
+}
+
+#contents {
+  width: 1140px;
+  height: 300px;
+  margin: 0 auto;
+/*  border: solid 1px red; */
+  margin-top: 380px;
+}
+
+#sub_menu {
+  width: 234px;
+  float: left;
+/*  border: solid 1px red; */
+  margin-top: 25px;
+}
+
+#main_contents {
+  width: 880px;
+  float: right;
+/*  border: solid 1px red; */
+  margin-top: 25px;
+}
+
+
+
+body {
+  font-family: "돋움";
+  font-size: 14px;
+  color: #444444;
+  background-image: url(img2/bg렌즈.png);
+  background-size: 120%;
+}
+li {
+  list-style-type: none;
+}
+#logo {
+  float: left;
+  margin: 20px 0 0 20px;
+/*  border: solid 1px red; */
+}
+#menus{
+  float: right;
+/*  border: solid 1px red; */
+}
+#top_menu {
+  text-align: right;
+  margin-top: 50px;
+/*  border: solid 1px red; */
+}
+#main_menu {
+  margin-top: 20px;
+  font-family: "맑은고딕";
+  font-size: 15px;
+  color: white;
+  /* border: solid 1px red; */
+
+}
+#main_menu li {
+  display: inline;
+  margin-left:  80px;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #666666;
+  border-radius: 10px;
+
+
+  width: 90px;
+  height: 25px;
+  margin-top: 40px;
+  float: left;
+  padding: 1px;
+  margin-left: 40px;
+  text-align: center;
+  background-color: #282828;
+  opacity: 80%;
+
+
+}
+
+
+
+#main_contents p{
+  margin-top: 30px;
+  line-height: 180%;
+}
+
+#main_contents #figure{
+margin-top: 30px;
+text-align: center;
+}
+
+#sub_menu h3{
+  font-size: 18px;
+  color: red;
+  padding: 12px;
+  background-color: #fff;
+  margin-top: -300px;
+  border-radius: 10px;
+
+}
+
+#sub_menu li{
+
+  padding: 10px;
+  border-bottom: dotted 1px #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+#main_contents h3{
+font-size: 22px;
+padding-bottom: 8px;
+border-bottom: solid 1px #cccccc;
+margin-top: -300px;
+color: white;
+}
+
+#main_contents p{
+margin-top: 30px;
+line-height: 180%;
+color: white;
+}
+
+#main_contents #figure{
+margin-top: 30px;
+text-align: center;
+opacity: 100%;
+padding:20px;
+
+}
+
+
+
+#main_contents #figure1{
+  margin-top: -422px;
+  margin-left: 230px;
+  text-align: center;
+position: absolute;
+z-index: 2;
+opacity: 70%;
+
+}
+
+
+#main_contents li{
+padding: 5px;
+}
+
+#footer_box{
+width: 1140px;
+height: 150px;
+margin: 0 auto;
+/* border: solid 1px green; */
+}
+
+#footer_logo{
+float: left;
+margin: 50px 0 0 30px;
+/* border: solid 1px red; */
+}
+
+#address{
+  float: right;
+  margin: 50px 30px 0 0;
+  color: white;
+  /* border: solid 1px red; */
+}
+
+
+/*.item*/ a:link{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: white;
+
+  }
+
+/*.item*/ a:visited{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: white;
+
+
+}
+
+/*.item*/ a:hover{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: skyblue;
+}
+
+/*.item*/ a:active{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: red;
+
+
+}
+
+
+img{
+  border-radius: 10px;
+  opacity: 90%;
+}
+
+footer {
+  width: 995px;
+  height: 10px;
+  margin-top: 0px;
+  margin-left: 500px;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+  border-bottom: solid 2px black;
+  border-top: solid 2px white;
+  border-radius: 20px;
+  background-color: #232323;
+  opacity: 50%;
+  color: white;
+}
+
+
+button{
+    background: none;
+    border-radius: 10px;
+    border: dotted 0px; #fff;
+    transform:translate(-0%,0%);
+    transition:transform 0.6s;
+    height: 10px;
+
+
+  }
+
+  button:hover > img
+  { transform: translate(-0%,0%) scale(1.1);
+
+  }
+
+  /*.item*/ a:link{
+    margin: 30 30px 30 30px;
+    text-decoration: none;
+    color: white;
+
+    }
+
+  /*.item*/ a:visited{
+    margin: 30 30px 30 30px;
+    text-decoration: none;
+    color: white;
+
+
+  }
+
+  /*.item*/ a:hover{
+    margin: 30 30px 30 30px;
+    text-decoration: none;
+    color: skyblue;
+  }
+
+  /*.item*/ a:active{
+    margin: 30 30px 30 30px;
+    text-decoration: none;
+    color: red;
+
+
+  }
+
+
+h4{
+  color: #282828;
+}
+
+#main_menu > li{
+  color: gray;
+}
+</style>
+
+
+</head>
+
+
+
+<body>
+
+<header>
+
+
+<div id="logo">
+  <a href="index.html"><img src="img2/로고.png" width=40px></a>
+</div>
+
+<nav id="menus">
+  <div id="top_menu">
+
+  </div>
+  <ul id="main_menu">
+    <a href="SEA.html"><li>자연</li></a>
+   <a href="도시.html"><li>도심</li></a>
+   <li>파라노마</li>
+   <a href="포커스아웃.html"><li>포커스아웃</li></a>
+
+
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+              <div class="clear"></div>
+
+<section id="contents">
+  <nav id="sub_menu">
+
+    <h3>파라노마</h3>
+<ul>
+
+<h4> <li>파라노마</li></h4>
+
+
+</ul>
+
+  </nav>
+
+<div id="main_contents">
+  <h3>파라노마</h3>
+  <p>파라노마란?
+<br>
+  파노라마(Panorama)는 본래 큰 전망이라는 뜻을 가진 단어이다. 현대에는 전체 경치 중에서도 360° 방향의 모든 경치를 담아내는 기법이나 장치, 또는 그렇게 담아 낸 사진이나 그림을 많이 의미한다.
+  한자로 표기할 경우 이 용어에 대한 중국의 사용 실태를 참고할 필요가 있는데, 전경(全景)은 180° 시야에 들어오는 경치를, 환경(環景)은 360° 시야에 들어오는 경치를 가리키는 말로 사용한다.</p>
+  <div id="figure">
+<button><a href="ㅋ.html">
+    <img src="img2/파라노마1.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅌ.html">
+    <img src="img2/파라노마10.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅊ.html">
+    <img src="img2/파라노마3.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅍ.html">
+    <img src="img2/파라노마4.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅠ.html">
+    <img src="img2/파라노마5.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅜ.html">
+    <img src="img2/파라노마6.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅡ.html">
+    <img src="img2/파라노마7.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅋㅋ.html">
+    <img src="img2/파라노마12.jfif" width="800px" height="250px;">
+</a></button>
+<br><br>
+<button><a href="ㅌㅌ.html">
+    <img src="img2/파라노마11.jfif" width="800px" height="250px;">
+</a></button>
+
+
+<div id="figure1">
+
+  </div></div>
+  <p>| 방대한 파라노마의 사진을 보고 실제 그 지역의 느낌을 느끼게 해주고자 다양한 파라노마의 사진을 공유하였느니,
+  코로나로 인해 여행을 가지 못하는 부분에 있어 대리만족을 하였으면, 하는 바램에서 만들어진
+  페이지입니다. 더 다양하고 많은 사진을 공유하기 위해 노력하겠습니다.</p>
+  <ul>
+    <br><br>
+
+
+
+</div>
+
+
+
+
+</header>
+
+<section id="main_img">
+<!--  메인 이미지 -->
+</section>
+
+<div id="main_contents">
+<!--  메인 콘텐츠 -->
+</div>
+</section>
+<div class="clear"></div><!--floot 속성해제-->
+
+
+                      <div class="clear"></div>
+
+                      <footer>
+
+
+                      Copyright @ hh All right reserved
+                      <br><br>
+
+
+                      </footer>
+
+
+  </body>
+</html>

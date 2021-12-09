@@ -1,0 +1,355 @@
+<!DOCTYPE html><!--22161126 허 민-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+
+
+<style media="screen">
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+#page {
+  width: 995px;
+  margin: 0 auto;
+}
+
+
+.clear {
+  clear: both;
+}
+
+body {
+  background-image: url(img2/bg렌즈.png);
+  font-family: Noto Sans CJK KR;
+  background-size: 120%;
+}
+
+header {
+padding: 10px;
+width: 995px;
+height: 100px;
+margin-top: 50px;
+margin-left: 10px;
+
+
+
+}
+
+#logo {
+  float: left;
+  margin-top: 60px;
+  margin-left: 5px;
+
+}
+
+#top {
+  float: right;
+  margin: 50px 20px 0 0;
+  color: white;
+
+}
+
+
+
+
+nav li{
+  width: 90px;
+  height: 25px;
+  margin-top: 30px;
+  float: left;
+  padding: 1px;
+  margin-left: 40px;
+  text-align: center;
+  background-color: #282828;
+  opacity: 80%;
+}
+
+.navi li{
+  width: 150px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+
+
+
+img {
+  border-radius: 20px;
+}
+
+
+
+
+
+
+li {
+
+  border-bottom: solid 3px black;
+
+  border-radius: 10px;
+  border-top: solid 1px white;
+
+
+}
+
+.menu {
+width: 20%;
+display: block;
+
+}
+
+
+/*.item*/ a:link{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: white;
+
+  }
+
+/*.item*/ a:visited{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: white;
+
+
+}
+
+/*.item*/ a:hover{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: skyblue;
+}
+
+/*.item*/ a:active{
+  margin: 30 30px 30 30px;
+  text-decoration: none;
+  color: red;
+
+
+}
+
+
+
+
+
+
+h1{
+  font-size: 20px;
+  margin-top: 90px;
+
+}
+
+#center2{
+margin-top: 15px;
+font-size: 40px;
+margin-left: 0 auto;
+text-align: center;
+color: white;
+font-family:Sandoll 삼립호빵체 TTF Outline;
+
+}
+
+input{
+  opacity: 0%;
+}
+
+
+.g1{
+
+  margin-top: 150px;
+  width: 995px;
+
+  border-radius: 50px;
+  height: 1100px;
+
+}
+
+.img_box{
+
+  width: 10px;
+  height: 20px;
+  float: left;
+  color: white;
+  text-align: center;
+  margin: 0px 140px;
+  border-radius: 10px;
+  opacity: 80%;
+
+  overflow: hidden;
+}
+
+h1{
+  font-size: 30px;
+}
+
+footer {
+  width: 995px;
+  height: 10px;
+  margin-top: 30px;
+  margin-left: 0px;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+  border-bottom: solid 2px black;
+  border-top: solid 2px white;
+  border-radius: 20px;
+  background-color: #232323;
+  opacity: 50%;
+  color: white;
+}
+
+.img-zoom-container {
+  position: relative;
+margin-top: -150px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+
+  width: 100px;
+  height: 100px;
+
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+
+  width: 995px;
+  height: 600px;
+
+}
+.ZOOM{
+  color: white;
+  margin-top: 230px;
+  margin-left: 350px;
+  font-size: 50px;
+  font-family: 에스코어 드림 5 Medium;
+  color: white;
+  font-size: 20px;
+}
+
+
+</style>
+
+
+
+
+
+
+  </head>
+  <body>
+<div id="page">
+
+
+<header>
+
+  <div id="logo">
+  <a href="index.html"><img src="img2/로고.png" width=40px></a>
+  </div>
+
+<div id="top">
+  <nav>
+  <ul type="none">
+  <li>자연</li>
+    <a href="도시.html"><li>도심</li></a>
+    <a href="파라노마.html"><li>파라노마</li></a>
+    <a href="포커스아웃.html"><li>클로즈업</li></a>
+  </ul>
+  </nav>
+
+</div>
+
+
+
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  img.parentElement.insertBefore(lens, img);
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    e.preventDefault();
+    pos = getCursorPos(e);
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    a = img.getBoundingClientRect();
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="ZOOM">
+  <h1>겨울 한옥</h1>  <br>
+  왼쪽 돋보기를 사용해 자세히 보세요
+</div>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="img2/한옥16.jfif" width="300" height="200">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+
+
+<script>
+imageZoom("myimage", "myresult");
+</script>
+
+
+
+
+
+
+<footer>
+
+
+Copyright @ hh All right reserved
+<br><br>
+
+
+</footer>
+
+
+</div>
+</header>
+
+  </body>
+</html>
